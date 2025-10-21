@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        char choice = 'y'; // ✅ Initialize to avoid compilation error
+        char choice = 'y'; 
 
         do {
             System.out.println("\n=== Java Console Calculator ===");
@@ -32,12 +32,12 @@ public class Calculator {
                     if (num2 != 0)
                         result = num1 / num2;
                     else {
-                        System.out.println("❌ Error: Division by zero!");
+                        System.out.println("Error: Division by zero!");
                         continue;
                     }
                     break;
                 default:
-                    System.out.println("❌ Invalid operator!");
+                    System.out.println("Invalid operator!");
                     continue;
             }
 
@@ -47,7 +47,7 @@ public class Calculator {
             choice = sc.next().charAt(0);
         } while (choice == 'y' || choice == 'Y');
 
-        System.out.println("\nCalculator exited. Goodbye! 👋");
+        System.out.println("\nCalculator exited. Goodbye!");
         sc.close();
     }
 }
